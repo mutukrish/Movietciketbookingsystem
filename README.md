@@ -21,15 +21,6 @@ Run `grunt` for building and `grunt serve` for preview.
 ![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
 /master/ss1.png)
 
-![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
-/master/ss2.png)
-
-![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
-/master/ss3.png)
-
-![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
-/master/ss4.png)
-
 	
 ## Testing
 
