@@ -16,10 +16,11 @@ Clone the project and run bower install
 
 Run `grunt` for building and `grunt serve` for preview.
 
+
 ## App screenshots
 ![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
 /master/ss1.png)
-
+![Alt text](ss1.png?raw=true "Optional Title")
 	
 ## Testing
 
