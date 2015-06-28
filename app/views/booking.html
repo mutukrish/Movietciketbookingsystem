@@ -1,0 +1,87 @@
+<div class="well">
+    <h2 class="title">
+        Welcome {{name}}
+    </h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="screen">Screen</div>
+
+            <table class="seatLayout">
+                <tr>
+                    <td class="padding-bottom"></td>
+                    <td class="padding-bottom" ng-repeat="col in cols track by $index" ng-bind="col"></td>
+                </tr>
+                <tr ng-repeat="row in rows">
+                    <td class="padding-right" ng-bind="row"></td>
+                    <td class="seat" ng-repeat="col in cols" ng-click="seatClicked(row + col)" ng-switch on="getStatus(row + col)">
+
+                        <span ng-switch-when="selected" class="btn btn-success"><cite class="glyphicon glyphicon-bed"></cite></span>
+                        <span ng-switch-when="reserved" class="btn btn-danger"><cite class="glyphicon glyphicon-bed"></cite></span>
+                        <span ng-switch-default class="btn"><cite class="glyphicon glyphicon-bed muted"></cite></span>
+                    </td>
+                </tr>
+            </table>
+            <div class="text-center">
+                <ul class="legend vList clearfix">
+                    <li> <span class="btn"><cite class="glyphicon glyphicon-bed"></cite></span>Available</li>
+                    <li><span class="btn btn-danger"><cite class="glyphicon glyphicon-bed"></cite></span>Reserved</li>
+                    <li> <span class="btn btn-success"><cite class="glyphicon glyphicon-bed"></cite></span>Selected</li>
+                </ul>
+            </div>
+        </div>
+         <div class="col-md-6">
+            <div class="bookingInfo">
+                <ul class="metaInfo unstyled">
+                    <li>Required Seats: {{reqSeats}}</li>
+                    <li>Selected Seats: {{seatSelected}}</li>
+                    <li>Selected Seat Number: {{seatNumber}}</li>
+
+                </ul>
+                <div class="btnGroup">
+                    <button class="btn btn-default btn-sm" ng-click="clearSelected()">Clear Selection</button>
+                <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#bookingmodal">View Booking History</button>
+                <button class="btn btn-success" ng-click="showSelected()" >Cofirm and Proceed<span class="glyphicon glyphicon-menu-right"></span></button>
+                </div>
+                
+            </div>
+    </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="bookingmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Booking History</h4>
+      </div>
+      <div class="modal-body">
+        <div ng-show="storagebookingHistory.length > 0">
+            <table class="table">
+                <tr>
+                  <th>Name</th>
+                  <th>No. of Seats</th>
+                  <th>Seat No.s</th>
+                </tr>
+                <tr ng-repeat="booking in storagebookingHistory">
+                  <td>{{booking.name}}</td>
+                  <td>{{booking.seats}}</td>
+                  <td>{{booking.seatnos}}</td>
+                </tr>
+                </tr>
+              </table>
+        </div>
+        <div ng-show="storagebookingHistory.length == 0">
+        No tickets booked yet!  </a>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-success" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
