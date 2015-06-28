@@ -22,6 +22,11 @@ Run `grunt` for building and `grunt serve` for preview.
 /master/ss1.png)
 ![Alt text](ss1.png?raw=true "Optional Title")
 	
+![Alt text](ss2.png?raw=true "Optional Title")
+
+![Alt text](ss3.png?raw=true "Optional Title")
+
+![Alt text](ss4.png?raw=true "Optional Title")
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
