@@ -20,7 +20,16 @@ Run `grunt` for building and `grunt serve` for preview.
 ## App screenshots
 ![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
 /master/ss1.png)
-![Alt text](ss1.png?raw=true "Optional Title")
+
+![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
+/master/ss2.png)
+
+![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
+/master/ss3.png)
+
+![ScreenShot](https://raw.github.com/mutukrish@gmail.com/Movietciketbookingsystem
+/master/ss4.png)
+
 	
 ## Testing
 
